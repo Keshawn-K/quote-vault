@@ -62,3 +62,18 @@ button:hover {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
+#copy-message {
+  color: #2DD4BF;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1F2933;
+  color: white;
+  margin-top: 30px;
+  font-family: Georgia, serif;
+}

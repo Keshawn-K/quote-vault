@@ -68,5 +68,11 @@ function copyQuote() {
 
   navigator.clipboard.writeText(textToCopy);
 
-  alert("Quote copied!");
+ const message = document.getElementById("copy-message");
+
+message.textContent = "Quote copied!";
+
+setTimeout(() => {
+  message.textContent = "";
+}, 1000);
 }

@@ -10,7 +10,9 @@ header {
   color: white;
   padding: 1rem;
   font-family: Georgia, serif;
-}
+  width: 100%;
+  box-sizing: border-box;
+} 
 
 nav a {
   margin: 0 10px;
@@ -20,8 +22,9 @@ nav a {
 }
 
 .quote-card {
-  margin: 50px auto;
+  margin: 30px auto;
   padding: 20px;
+  width: 90%;
   max-width: 500px;
   border-radius: 10px;
   background-color: white;
@@ -29,7 +32,7 @@ nav a {
 }
 
 button {
-  margin: 10px;
+  margin: 10px auto;
   padding: 10px 20px;
   cursor: pointer;
   background-color: #2DD4BF;
@@ -37,6 +40,9 @@ button {
   border-radius: 5px;
   color: white;
   font-family: "Courier New", monospace;
+  display: block;
+  width: 80%;
+  max-width: 200px;
 }
 
 button:hover {

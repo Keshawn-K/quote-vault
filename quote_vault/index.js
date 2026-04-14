@@ -9,3 +9,26 @@ async function getQuote() {
 getQuote();
 
 document.getElementById("new-quote-btn").addEventListener("click", getQuote);
+
+document.getElementById("save-btn").addEventListener("click", saveQuote);
+
+function saveQuote() {
+  const quoteText = document.getElementById("quote").textContent;
+  const authorText = document.getElementById("author").textContent;
+
+  const quoteObj = {
+    quote: quoteText,
+    author: authorText
+  };
+
+  // get existing favorites
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  // add new quote
+  favorites.push(quoteObj);
+
+  // save back to localStorage
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  alert("Quote saved!");
+}

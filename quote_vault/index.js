@@ -57,3 +57,16 @@ async function searchQuotes() {
     document.getElementById("author").textContent = "";
   }
 }
+
+document.getElementById("copy-btn").addEventListener("click", copyQuote);
+
+function copyQuote() {
+  const quote = document.getElementById("quote").textContent;
+  const author = document.getElementById("author").textContent;
+
+  const textToCopy = `${quote} ${author}`;
+
+  navigator.clipboard.writeText(textToCopy);
+
+  alert("Quote copied!");
+}

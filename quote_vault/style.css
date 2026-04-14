@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  background-color: #9CA3AF;
   text-align: center;
 }
 
@@ -8,24 +9,36 @@ header {
   background-color: #1F2933;
   color: white;
   padding: 1rem;
+  font-family: Georgia, serif;
 }
 
 nav a {
   margin: 0 10px;
-  color: white;
+  color: #2DD4BF;
   text-decoration: none;
+  font-family: "Courier New", monospace;
 }
 
 .quote-card {
   margin: 50px auto;
   padding: 20px;
   max-width: 500px;
-  border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 button {
   margin: 10px;
   padding: 10px 20px;
   cursor: pointer;
+  background-color: #2DD4BF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Courier New", monospace;
+}
+
+button:hover {
+  opacity: 0.8;
 }

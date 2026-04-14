@@ -7,3 +7,5 @@ async function getQuote() {
 }
 
 getQuote();
+
+document.getElementById("new-quote-btn").addEventListener("click", getQuote);

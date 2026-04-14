@@ -5,17 +5,25 @@ function loadFavorites() {
 
   container.innerHTML = "";
 
-  favorites.forEach(item => {
-    const div = document.createElement("div");
-    div.classList.add("quote-card");
+  favorites.forEach((item, index) => {
+  const div = document.createElement("div");
+  div.classList.add("quote-card");
 
-    div.innerHTML = `
-      <p>${item.quote}</p>
-      <h4>${item.author}</h4>
-    `;
+  div.innerHTML = `
+    <p>${item.quote}</p>
+    <h4>${item.author}</h4>
+    <button onclick="removeFavorite(${index})">Remove</button>
+  `;
 
-    container.appendChild(div);
-  });
+  container.appendChild(div);
+});
+}
+
+function removeFavorite(index) {
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  favorites.splice(index, 1);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  loadFavorites();
 }
 
 loadFavorites();

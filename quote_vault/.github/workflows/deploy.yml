@@ -2,8 +2,8 @@ name: Deploy QuoteVault
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+  workflow_dispatch:
 
 permissions:
   contents: read

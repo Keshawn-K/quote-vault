@@ -19,6 +19,16 @@ nav a {
   color: #2DD4BF;
   text-decoration: none;
   font-family: "Courier New", monospace;
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .quote-card {

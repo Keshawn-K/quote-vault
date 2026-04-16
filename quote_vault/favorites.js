@@ -39,8 +39,12 @@ function removeFavorite(index) {
 document.getElementById("clear-btn").addEventListener("click", clearFavorites);
 
 function clearFavorites() {
-  localStorage.removeItem("favorites");
-  loadFavorites();
+  const confirmClear = confirm("Are you sure you want to clear all favorites?");
+
+  if (confirmClear) {
+    localStorage.removeItem("favorites");
+    loadFavorites();
+  }
 }
 
 loadFavorites();

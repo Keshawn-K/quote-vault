@@ -31,4 +31,11 @@ function removeFavorite(index) {
   loadFavorites();
 }
 
+document.getElementById("clear-btn").addEventListener("click", clearFavorites);
+
+function clearFavorites() {
+  localStorage.removeItem("favorites");
+  loadFavorites();
+}
+
 loadFavorites();

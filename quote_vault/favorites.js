@@ -1,14 +1,19 @@
 function loadFavorites() {
   const container = document.getElementById("favorites-container");
 
+  const clearButton = document.getElementById("clear-btn");
+
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   container.innerHTML = "";
 
   if (favorites.length === 0) {
   container.innerHTML = "<p>No favorites yet.</p>";
+  clearButton.style.display = "none";
   return;
 }
+
+  clearButton.style.display = "block";
 
   favorites.forEach((item, index) => {
   const div = document.createElement("div");

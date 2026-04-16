@@ -5,6 +5,11 @@ function loadFavorites() {
 
   container.innerHTML = "";
 
+  if (favorites.length === 0) {
+  container.innerHTML = "<p>No favorites yet.</p>";
+  return;
+}
+
   favorites.forEach((item, index) => {
   const div = document.createElement("div");
   div.classList.add("quote-card");

@@ -77,3 +77,10 @@ footer {
   margin-top: 30px;
   font-family: Georgia, serif;
 }
+
+#favorites-container p {
+  text-align: center;
+  font-size: 18px;
+  color: #1F2933;
+  margin-top: 20px;
+}
